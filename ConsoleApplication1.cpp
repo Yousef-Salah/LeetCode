@@ -2,10 +2,18 @@
 //
 
 #include <iostream>
+#include "RomanNumber.h"
+
+using namespace std;
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    string str = "MCMXCIV";
+
+    RomanNumber number;
+
+    cout << number.romanToInt(str);
+
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
