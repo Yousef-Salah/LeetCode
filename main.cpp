@@ -4,6 +4,7 @@
 #include <iostream>
 #include "RomanNumber.h"
 #include "RemoveDuplicatesfromSortedArray.h"
+#include "MergeTwoSortedLists.h"
 #include <vector>
 using namespace std;
 
@@ -13,7 +14,7 @@ int main()
     //RomanNumber number;
     //cout << number.romanToInt(str);
 
-    RemoveDuplicates x;
+  /*  RemoveDuplicates x;
     
     vector<int> nums;
     nums.push_back(0);
@@ -36,7 +37,27 @@ int main()
     for (auto i = nums.begin(); i < nums.end(); i++)
     {
         cout << *i << endl;
+    }*/
+
+
+    ListNode* list = new ListNode(1);
+    list->next = new ListNode(2);
+    list->next->next = new ListNode(4);
+
+    ListNode* list2 = new ListNode(1);
+    list2->next = new ListNode(3);
+    list2->next->next = new ListNode(4);
+
+    Solution r;
+    ListNode* result = r.mergeTwoLists(list, list2);
+
+
+    while (result != nullptr) {
+        cout << result->val << "\t";
+        result = result->next;
     }
+
+    return 0;
 
 }
 
